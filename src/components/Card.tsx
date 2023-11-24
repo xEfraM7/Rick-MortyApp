@@ -8,7 +8,7 @@ export const Card = ({ re }: cardProp) => {
   return (
     <>
       <div className="card w-25 bg-black shadow-xl my-5 m-3">
-        <figure className="mt-5">
+        <figure className="mt-5 mx-10">
           <img src={re.image} />
         </figure>
         <div className="card-body">
