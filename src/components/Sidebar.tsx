@@ -4,7 +4,7 @@ export const Sidebar = ({ children }: { children: JSX.Element }) => {
   const Menus = [
     { title: "Lista de Personajes", src: "Chart_fill" },
     { title: "Localizacion", src: "Chat" },
-    { title: "Episodio", src: "User" },
+    { title: "Episodio", src: "User" }
   ];
 
   return (
@@ -51,8 +51,8 @@ export const Sidebar = ({ children }: { children: JSX.Element }) => {
         </ul>
       </div>
       <div className="h-screen flex-1 p-7">
-        <h1 className="text-2xl font-semibold ">
-          Lista de Personajes Rick and Morty
+        <h1 className="text-2xl font-semibold text-center">
+          Lista de Personajes Rick & Morty
         </h1>
         {children}
       </div>
