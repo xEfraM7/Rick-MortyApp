@@ -1,11 +1,7 @@
 import { useState } from "react";
 export const Sidebar = ({ children }: { children: JSX.Element }) => {
   const [open, setOpen] = useState(true);
-  const Menus = [
-    { title: "Lista de Personajes", src: "Chart_fill" },
-    { title: "Localizacion", src: "Chat" },
-    { title: "Episodio", src: "User" },
-  ];
+  const Menus = [{ title: "Rick & Morty", src: "Chart_fill" }];
 
   return (
     <div className="flex relative">
@@ -32,7 +28,7 @@ export const Sidebar = ({ children }: { children: JSX.Element }) => {
               !open && "scale-0"
             }`}
           >
-            App
+            Lista de Personajes
           </h1>
         </div>
         <ul className="pt-6">
@@ -43,6 +39,7 @@ export const Sidebar = ({ children }: { children: JSX.Element }) => {
               ${index === 0 && "bg-light-white"} `}
             >
               <img src={`../src/assets/${Menu.src}.png`} />
+
               <span className={`${!open && "hidden"} origin-left duration-200`}>
                 {Menu.title}
               </span>
@@ -51,9 +48,6 @@ export const Sidebar = ({ children }: { children: JSX.Element }) => {
         </ul>
       </div>
       <div className="h-screen max-h-screen overflow-y-auto flex-1 p-7">
-        <h1 className="text-2xl font-semibold text-center">
-          Lista de Personajes Rick & Morty
-        </h1>
         {children}
       </div>
     </div>

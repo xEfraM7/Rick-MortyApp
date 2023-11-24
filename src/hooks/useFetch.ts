@@ -12,7 +12,17 @@ export const useFetch = () => {
     fetchData().catch(console.error);
   }, []);
 
+  const searchPage = (number: number) => {
+    const fetchData = async () => {
+      const data = await fetch(`https://rickandmortyapi.com/api/character/?page=${number}`);
+      const json = await data.json();
+      setcharacterList(json)
+    };
+    fetchData().catch(console.error);
+  };
+
   return {
     characterList,
+    searchPage,
   };
 };
